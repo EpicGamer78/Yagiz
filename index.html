@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <main class='gameplay'>
+      <h2 class='title'>
+        Clickeria - click to bake a Pizza</h2>
+      <img src='https://i.pinimg.com/originals/76/e9/d8/76e9d8380d03b370bb5f7e2a386128ec.png' onclick='addMoney(amountPerClick)'width=200>
+      <h4>Current Money:<span id='moneyValue'>0</span></h4>
+      <div class='upgradeArea'>
+        <div class='pizzaPrice'>
+          <p>Your pizza sells for $<span id='currentPizzaPrice'>2</span></p>
+          <button onclick='increaseSellingPrice();'>Click to Increase Price!<span id='priceSpan'>($0)</span></button>
+        </div>
+      </div>
+    </main>
+    <script>
+      const currentMoney = document.getElementById('moneyValue');
+      const currentPizzaPrice = document.getElementById('currentPizzaPrice');
+      const priceSpan = document.getElementById('priceSpan');
+      var money=0;
+      var amountPerClick=2;
+      var costToUpgrade;
+      function addMoney(amountToAdd){
+        money+=amountToAdd;
+        currentMoney.innerHTML=money;
+        
+      }
+    </script>
+  </body>
+</html>
